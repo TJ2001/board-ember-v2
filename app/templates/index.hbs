@@ -9,3 +9,16 @@ We hope you find exactly what you're looking for in a place to stay.
 </ul>
 
 {{new-answer saveAnswer2="saveAnswer3"}}
+
+
+<h2> Questions </h2>
+
+<ul>
+  {{#each model.questions as |question|}}
+    <li>{{#link-to 'question' question.id}}{{question.screenName}}{{/link-to}}</li>
+  {{/each}}
+</ul>
+
+<!-- {{new-question saveQuestion="saveQuestion"}} -->
+
+<hr>
