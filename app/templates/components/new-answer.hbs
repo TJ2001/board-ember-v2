@@ -1,0 +1,25 @@
+{{#if addNewAnswer}}
+<h1>New Answer</h1>
+<div>
+  <form>
+    <div class="form-group">
+      <label for="screenName">User Name</label>
+      {{input value=screenName id="screenName"}}
+    </div>
+
+    <div class="form-group">
+      <label for="avatar">Link Your Avatar's Image</label>
+      {{input size="105" value=avatar id="avatar"}}
+    </div>
+
+    <div class="form-group">
+      <label for="solution">Answer</label>
+      {{input value=solution id="solution"}}
+    </div>
+
+    <button {{action 'saveAnswer1'}}>Submit Answer</button>
+  </form>
+</div>
+{{else}}
+  <button {{action 'answerFormShow'}}>Submit Answer</button>
+{{/if}}
