@@ -3,7 +3,7 @@
 We hope you find exactly what you're looking for in a place to stay.
 
 <ul>
-  {{#each model as |answer|}}
+  {{#each model.answers as |answer|}}
     {{answer-tile answer=answer}}
   {{/each}}
 </ul>
@@ -18,6 +18,14 @@ We hope you find exactly what you're looking for in a place to stay.
     <li>{{#link-to 'question' question.id}}{{question.screenName}}{{/link-to}}</li>
   {{/each}}
 </ul>
+
+{{#each model.questions as |question|}}
+  <div class="row">
+     <h4>{{question.query}}</h4>
+     <img class="avatar" src={{question.avatar}}>
+  </div>
+  {{#link-to 'question' question.id}}<h3 class="hotlink">{{question.query}}</h3>{{/link-to}}
+{{/each}}
 
 <!-- {{new-question saveQuestion="saveQuestion"}} -->
 

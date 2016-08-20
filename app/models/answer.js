@@ -4,5 +4,5 @@ export default DS.Model.extend({
   screenName: DS.attr(),
   avatar: DS.attr(),
   solution: DS.attr(),
-  question: DS.attr()
+  question: DS.belongsTo('question', { async: true})
 });
